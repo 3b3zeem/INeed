@@ -12,29 +12,37 @@ const Header = () => {
     speed: 500,
     autoplay: true,
     autoplaySpeed: 3000,
-    slidesToShow: Math.min(data?.length, 1),
+    slidesToShow: 1,
     slidesToScroll: 1,
     arrows: false,
     beforeChange: (oldIndex, newIndex) => setActiveSlide(newIndex),
-    appendDots: (dots) => (
-      <div
-        style={{
-          bottom: "-30px",
-          position: "absolute",
-          width: "100%",
-        }}
-      >
-        <ul
+    appendDots: (dots) => {
+      let bottomValue = "-20px";
+      if (window.innerWidth <= 480) {
+        bottomValue = "-5px";
+      } else if (window.innerWidth <= 768) {
+        bottomValue = "-20px";
+      }
+      return (
+        <div
           style={{
-            margin: 0,
-            display: "flex",
-            justifyContent: "center",
+            bottom: bottomValue,
+            position: "absolute",
+            width: "100%",
           }}
         >
-          {dots}
-        </ul>
-      </div>
-    ),
+          <ul
+            style={{
+              margin: 0,
+              display: "flex",
+              justifyContent: "center",
+            }}
+          >
+            {dots}
+          </ul>
+        </div>
+      );
+    },
     customPaging: (i) => (
       <div
         style={{
@@ -85,7 +93,7 @@ const Header = () => {
             <Slider {...settings}>
               {Array.isArray(data) &&
                 data.map((item) => (
-                  <div key={item.id} className="h-[500px] w-full relative">
+                  <div key={item.id} className="h-[500px] w-full relative focus:outline-none">
                     <img
                       src={item.image}
                       alt={`${item.id}`}
