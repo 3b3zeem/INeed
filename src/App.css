@@ -1,0 +1,37 @@
+@import "tailwindcss";
+
+::selection{
+    background-color: #fff;
+    color: #933ABC;
+}
+
+body::-webkit-scrollbar {
+    width: 10px;
+}
+
+body::-webkit-scrollbar-thumb {
+    background-color: #933ABC;
+}
+
+body::-webkit-scrollbar-track {
+    background-color: #eeeeee;
+}
+
+img {
+  -webkit-user-drag: none;
+  user-drag: none;
+  pointer-events: auto;
+}
+
+img::selection {
+  background: none;
+}
+
+img {
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
