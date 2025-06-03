@@ -32,7 +32,7 @@ const INeed = () => {
 
           <div className="flex flex-wrap justify-center gap-4" dir="ltr">
             <a
-              href="https://example.com/ineed-app.apk"
+              href="/app-release.apk"
               download
               className="flex items-center gap-2 bg-white text-black py-2 px-4 shadow-md hover:scale-105 transition-transform"
             >
