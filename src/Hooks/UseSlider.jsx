@@ -8,7 +8,7 @@ const useSlider = () => {
 
   const fetch = async () => {
     try {
-      const res = await axios.get("https://ineed.dinamo-app.com/api/sliders");
+      const res = await axios.get("https://ineed-apps.com/iNeed/public/api/sliders");
       setData(res.data.data);
       console.log(res.data.data);
     } catch (err) {
