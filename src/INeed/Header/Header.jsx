@@ -3,7 +3,7 @@ import Slider from "react-slick";
 import useSlider from "../../Hooks/UseSlider";
 
 const Header = () => {
-  const { data, loading, error } = useSlider();
+  const { data, loading, error } = useSlider();  
   const [activeSlide, setActiveSlide] = useState(0);
 
   const settings = {
