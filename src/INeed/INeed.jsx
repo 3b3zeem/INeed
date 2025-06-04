@@ -44,7 +44,7 @@ const INeed = () => {
             </a>
 
             <a
-              href="https://apps.apple.com/your-app-link"
+              href="https://testflight.apple.com/join/1eAW3KX2"
               target="_blank"
               rel="noopener noreferrer"
               className="flex items-center gap-2 bg-white text-black py-2 px-4 shadow-md hover:scale-105 transition-transform"
